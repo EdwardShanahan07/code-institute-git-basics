@@ -1,108 +1,69 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Git Basics Commands
+`git init` Initialise a new git repository 
 
-Welcome Edward Shanahan,
+`git status` show the status of the git repository 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+`git add` will add files to the staging area
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
+```bash
+git add hello.txt
 ```
 
-**Anything more?**
+git commit will commit to git repository 
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+```bash
+git commit -m "Add hello.txt file"
+```
 
----
+## About Commit Messages
 
-Happy coding!
+In the previous unit, we discussed how to add commit messages. Here are some answers to commonly asked questions:
+What should my commit message say?
+Ideally, your message should explain what the commit contains. The commit message should be 50 characters or less but should be detailed.
+Here are some examples of bad commit messages:
+`Fixed error`
+`Added page`
+`Updated README.md`
+Why are these bad? They do not give any meaningful information about what the commit contains. Also, it's recommended that commit messages are written using the imperative mood as a command or request. Imagine that you are prefacing every commit message with the words, "This commit will..." Here are the improved versions:
+`Fix the bug causing the main image to overflow screen`
+`Add boilerplate to about.html for the About Me page`
+`Add testing & deployment information to README.md`
+Notice that these messages actually explain something about what the commit contains, and they are written in the imperative mood. That's the kind of detail we should aim for.
+Why does it matter for a personal project?
+The main reason it matters is so that you (and anyone else who is interested in your project) can see the history and roll things back if required. We want you to learn good software development habits throughout the programme. Writing clear, meaningful commit messages is an important part of being a good citizen in the development community.
+Additionally, you will be assessed on the quality of your commit messages when you submit your end-of-module projects, so it makes sense to take some time to write descriptive commit messages.
+Is there a recommended format for commit messages?
+If your message says something like: `Make heroImage.jpg in index.html responsive`, then that's a good message. You could adopt the convention that some developers use of prefixing their commit messages with `feat` for feature, `fix` for a bugfix, `style` for changes to your CSS, `docs` for changes related to documentation, `refactor` for refactored code or `maint` for general maintenance.
+So, the above example would look like this: `fix: Make heroImage.jpg in index.html responsive`. If you were updating your README file, you could have a commit message like this: `docs: Add testing & deployment sections to README`.
+If you do choose to use a format like this, then be consistent throughout your project and use it for every commit.
+How often should I commit?
+That is entirely up to you. A good rule of thumb is to commit after every major change or addition of a new page or feature. Smaller changes, such as grammar, spelling and minor content changes, don't necessarily need their own commit each time, but group about four or five of them into one commit.
+Can I change a commit message?
+Your git commit messages are your project's history. Therefore, we would strongly recommend getting into the habit of writing considered commit messages. Although technically, a commit message can be amended, by doing so you are rewriting history. Even if you are the only contributor, this amendment leads to problems, as the GitHub history will no longer match the local git history. It has much worse consequences in a collaborative project as then your collaborators will have a different history, and they will have to make manual changes. In either instance, you will have brought your project to a grinding halt and will have painful remedial work to do.
+Keep in mind these things as you progress through the programme, and make sure you are always writing descriptive and meaningful commit messages. We suggest that you refer back to this section when you start your milestone project.
+
+git rm —cached file.name will remove changes from stage area 
+
+```bash
+git rm --cached hello.txt
+```
+
+`git log` will show previous git commits
+
+`git diff` will show the difference between two files
+
+```bash
+git diff hello.txt
+```
+
+git reset will revert to a previous commit 
+
+```bash
+git reset --hard ff11f9
+```
+
+.gitignore file is used to files or folders you dont want added to git
+
+```bash
+bye.txt
+```
